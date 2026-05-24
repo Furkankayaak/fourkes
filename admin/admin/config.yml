@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: Furkankayaak/Furkankayaak.github.io 
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "blog"
+    label: "Hikayeler"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Yayınlama Tarihi", name: "date", widget: "datetime" }
+      - { label: "Kapak Resmi", name: "image", widget: "image", required: false }
+      - { label: "Özet / Kısa Açıklama", name: "description", widget: "string" }
+      - { label: "Hikaye İçeriği", name: "body", widget: "markdown" }
